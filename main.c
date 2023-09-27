@@ -4,26 +4,56 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int numero1 ;
-	int numero2;
-	int total;
-	printf("Digite um valor para o numero1:\n");
-	scanf("%d",&numero1);
-	printf ("Digite um valor para o numero2:\n");
-	scanf("%d",&numero2);
-	total = numero1 + numero2;
+	//variaveis
+	int opcao;
+	int operacao;
+	float numero1;
+	float numero2;
+	float total;
 	
-	if(total+10){
-		printf("O Valor total e maior que 10");
-	}else {
-		if (total<0){
-			printf("numero negativo");
-		}
-		else {
-			printf("Valor menor que 10");
-		}
-	}
-	return 0;
+	opcao=1;
+ 	while (opcao==1){
+ 		//operaçoes
+ 		printf ("Digite 1 para Multiplicacao \n");
+ 		printf ("Digite 2 para Adicao \n");
+ 		printf ("Digite 3 para Subtracao \n");
+ 		printf ("Digite 4 para Divisao \n");
+ 		scanf("%d", &operacao);
+ 		
+ 		//numeros
+ 		printf("Digite um Numero: ");
+ 		scanf("%f", &numero1);
+ 		printf("Digite outro Numero: ");
+ 		scanf ("%f", &numero2);
+ 		
+ 
+ 		//switch
+ 		switch (operacao){
+ 			case 1:
+ 			total = numero1 * numero2;
+ 			break;
+ 			
+ 			case 2:
+ 			total = numero1 + numero2;
+ 			break;
+ 			
+ 			case 3:
+ 			total = numero1 - numero2;
+ 			break;
+ 			
+ 			case 4:
+ 			total = numero1 / numero2;
+ 			break;
+		 }
+		 
+		 //resultados
+		 printf("o total de sua operacao: %.2f \n", total);
+		 	printf("Se quiser continuar digite 1,caso queira terminar sua operaçao digite 2 \n");
+		 	scanf("%d", &opcao);
+	 }
+	 	
+
+		 return 0;
 }
 
 
